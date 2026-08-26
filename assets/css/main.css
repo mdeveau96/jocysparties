@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+/* Tailwind CSS v4 directive: https://tailwindcss.com/docs/theme */
+/* stylelint-disable at-rule-no-unknown */
+@theme {
+  /* Define custom color names mapping your exact HEX keys */
+  --color-wedding-sage: #879883;
+  --color-wedding-gold: #d4af37;
+  --color-wedding-charcoal: #2c2c2c;
+  --color-wedding-linen: #f3efe6;
+  --color-wedding-cream: #fdfbf7;
+}
+/* stylelint-enable at-rule-no-unknown */
+
+:root {
+  /* Connect Nuxt UI's semantic keys to your new custom theme colors */
+  --ui-primary: var(--color-wedding-sage);
+  --ui-secondary: var(--color-wedding-gold);
+  --ui-neutral: var(--color-wedding-charcoal);
+
+  /* Establish the base wedding site background color layout */
+  background-color: var(--color-wedding-linen);
+  color: var(--color-wedding-charcoal);
+}
