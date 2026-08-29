@@ -6,33 +6,38 @@ const route = useRoute();
 const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Rentals",
-    // to: '/docs/getting-started',
-    // active: route.path.startsWith('/docs/getting-started')
+    to: '/',
+    active: route.path.startsWith('/rentals')
   },
   {
     label: "Our Services",
-    // to: '/docs/components',
-    // active: route.path.startsWith('/docs/components')
+    to: '/services',
+    active: route.path.startsWith('/services')
   },
   {
     label: "About Us",
-    // to: 'https://go.nuxt.com/figma-ui',
+    to: '/about',
+    active: route.path.startsWith('/about')
   },
   {
     label: "Contact Us",
-    // to: 'https://github.com/nuxt/ui/releases',
+    to: '/contact',
+    active: route.path.startsWith('/contact')
   },
 ]);
 </script>
 
 <template>
   <UHeader :ui="{ root: 'bg-(--ui-bg-color)', container: 'max-w-none', center: 'flex-1 justify-center' }">
+    <template #title>
+      <NuxtLink to="/" class="flex items-center gap-2 text-rose-400 hover:text-rose-500 transition-colors">
+        <img src="/JocyPartyRentals-LogoZ-removebg.png" alt="Jocy's Parties" class="h-20" />
+      </NuxtLink>
+    </template>
     <template #left />
-
     <UNavigationMenu :items="items" />
-
     <template #right>
-      <UColorModeButton />
+      <UButton class="bg-(--color-wedding-rose) text-white hover:bg-rose-700" variant="soft" size="md" to="/contact">Get a Quote</UButton>
     </template>
   </UHeader>
 </template>

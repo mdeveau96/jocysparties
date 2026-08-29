@@ -10,6 +10,7 @@
   --color-wedding-charcoal: #2c2c2c;
   --color-wedding-linen: #f3efe6;
   --color-wedding-cream: #fdfbf7;
+  --color-wedding-rose: #FF007F;
 }
 /* stylelint-enable at-rule-no-unknown */
 
@@ -18,6 +19,7 @@
   --ui-primary: var(--color-wedding-sage);
   --ui-secondary: var(--color-wedding-gold);
   --ui-neutral: var(--color-wedding-charcoal);
+  --ui-rose: var(--color-wedding-rose);
 
   /* Establish the base wedding site background color layout */
   background-color: var(--color-wedding-linen);
